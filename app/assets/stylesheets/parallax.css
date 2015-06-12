@@ -56,13 +56,19 @@
     transform: translate(-50%, -50%);
   }
 
-   body, html {
+  body, html {
     overflow: hidden;
   }
-    .parallax {
+  .parallax {
     font-size: 120%;
     color: white;
   }
+  .pollution {
+  	font-size: 140%;
+  	color: white;
+  	font-weight: bold;
+  }
+
 
   #group1 {
     z-index: 5; /* slide over group 2 */
@@ -84,7 +90,7 @@
     z-index: 4; /* slide over group 2 and 4 */
   }
   #group3 .parallax__layer--base {
-    background: rgb(153,216,101);
+    background: rgb(0,0,0);
   }
 
   #group4 {
@@ -107,12 +113,13 @@
     z-index: 2; /* slide under group 5 and 7 */
   }
   #group6 .parallax__layer--back {
-    background: rgb(245,235,100);
-  }
+		background-color: #000000;
+    background-image: url("Coalpower.jpg");
+    background-size: cover;  }
 
   #group7 {
     z-index: 3; /* slide over group 7 */
   }
   #group7 .parallax__layer--base {
-    background: rgb(255,241,100);
+    background: rgb(0,0,0);
   }
