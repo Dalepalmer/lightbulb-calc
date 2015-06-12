@@ -61,20 +61,23 @@
   }
     .parallax {
     font-size: 120%;
+    color: white;
   }
 
   #group1 {
     z-index: 5; /* slide over group 2 */
   }
   #group1 .parallax__layer--base {
-    background: rgb(102,204,102);
+  	background-color: #000000;
   }
 
   #group2 {
     z-index: 3; /* slide under groups 1 and 3 */
   }
   #group2 .parallax__layer--back {
-    background: rgb(123,210,102);
+    background-color: #ffffff;
+    background-image: url("bluemarblewest.jpg");
+    background-size: cover;
   }
 
   #group3 {
@@ -88,7 +91,9 @@
     z-index: 2; /* slide under group 3 and 5 */
   }
   #group4 .parallax__layer--deep {
-    background: rgb(184,223,101);
+   	background-color: #000000;
+    background-image: url("Fairy-forest.jpg");
+    background-size: cover;
   }
 
   #group5 {
