@@ -1,37 +1,51 @@
-var Pizza = {
-  cut: 0,
+var Usage = {
 
-  pizzaCut: function() {
-    if (this.topping === "Pepperoni") {
-      this.cut = this.diameter * 4 ;
-      return 2 * Math.floor(this.cut / 2);
-    } else {
-      this.cut = this.diameter / 3.14;
-      return 2 * Math.ceil(this.cut / 2);
+    usageCalc: function() {
+      var watts = 0,
+      newWatt = 0,
+      newKiloWatts = 0,
+      kiloWatts = 0,
+      kiloWattDiff = 0;
+      yearlyDiff = 0;
+
+      if (this.currentBulb === "Incandescent") {
+        watts = 60;
+      } else {
+      watts = 12;
     }
+      if (this.newBulb === "LED") {
+        newWatt = 8;
+      } else {
+        newWatt = 12;
+    }
+
+    kiloWatts = watts * this.hours;
+    newKiloWatts = newWatt * this.hours;
+    kiloWattDiff = kiloWatts - newKiloWatts;
+
+    return kiloWattDiff * this.count / 1000
   }
 };
 
 $(document).ready(function() {
-
-
-
-  $("form#pizza-form").submit(function(event) {
+  $("form#lightbulb-form").submit(function(event) {
     event.preventDefault();
 
-    var inputtedDiameter = $("input#pizza-size").val();
-    var inputtedName = $("input#customer").val();
-    var inputtedTopping = $("select#topping").val();
+    var count = $("input#bulb-count").val();
+    var inputtedHours = $("input#hours").val();
+    var currentBulb = $("select#current-type").val();
+    var newBulb = $("select#new-type").val();
 
-    var newPizza = Object.create(Pizza);
-    newPizza.customerName = inputtedName;
-    newPizza.diameter = inputtedDiameter;
-    newPizza.topping = inputtedTopping;
-    newPizzaCut = newPizza.pizzaCut();
+    var newUsage = Object.create(Usage);
+    newUsage.hours = inputtedHours;
+    newUsage.currentBulb = currentBulb;
+    newUsage.newBulb = newBulb;
+    newUsage.count = count;
+    newUsageCalc = newUsage.usageCalc();
 
-    $("form#pizza-form").hide();
-    $("ul#customer").append("<p>" + "Customer Name:" + " " + newPizza.customerName + "</p>");
-    $("ul#toppings").append("<p>" + "Toppings:" + " " + newPizza.topping + "</p>");
-    $("ul#pizza-output").append("<p>" + "Amount of slices:" + " " + newPizzaCut + "</p>");
+
+    $("form#lightbulb-form").hide();
+    $("ul#lightbulb-output").append("<p>" + "Amount of Energy Saved:" + " " + newUsageCalc + " Kilowatts" + "Per Day" + "</p>");
+    $("ul#lightbuld-savings").appead("<p>" + "Which Addes up to" + yearlyDiff + " Killwatts a year" + "<p>");
   });
 });

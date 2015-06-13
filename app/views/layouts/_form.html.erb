@@ -3,32 +3,36 @@
         <div class="col-md-6">
           <h3>Calculate how much money/energy you could save by switching to LED lighting today</h3>
           <div class="col-md-6">
-            <form id="pizza-form">
+            <form id="lightbulb-form">
               <div class="form-group">
-                <label for="customer">Your Name</label>
-                <input type="text" class="form-control" id="customer" required>
-              </div><br>
-              <div class="form-group">
-                <label for="bulb-count">Number of Bulbs you are willing to change</label>
+                <label for="bulb-count">Number of Bulbs you are willing to change in your household</label>
                 <input type="integer" class="form-control" id="bulb-count" required>
               </div><br>
               <div class="form-group">
-                <label for="bulb-type-prior">Current Bulb?</label>
-                <select id="topping">
-                  <option value="Pepperoni">Pepperoni</option>
-                  <option value="Cheese">Cheese</option>
+                <label for="hours">Average number of hours used per day</label>
+                <input type="integer" class="form-control" id="hours" required>
+              </div><br>
+              <div class="form-group">
+                <label for="bulb-type-prior">Current Bulb Type?</label>
+                <select id="current-type">
+                  <option value="Incandescent">Incandescent</option>
+                  <option value="CFL">Compact Fluorescent</option>
+                </select>
+              </div><br><div class="form-group">
+                <label for="bulb-type-after">New Bulb Type?</label>
+                <select id="new-type">
+                  <option value="LED">LED</option>
+                  <option value="CFL">Compact Fluorescent</option>
                 </select>
               </div><br>
               <div class="form-group">
-                <button type="submit" class="btn btn-\success">Submit your order</button>
+                <button type="submit" class="btn btn-\success">Calculate Your Savings</button>
               </div>
             </form>
           </div>
         </div>
       </div>
-    <div id="pizza">
-      <ul id="customer"></ul>
-      <ul id="toppings"></ul>
-      <ul id="pizza-output"></ul>
+    <div id="output">
+      <ul id="lightbulb-output"></ul>
     </div>
    </div>
