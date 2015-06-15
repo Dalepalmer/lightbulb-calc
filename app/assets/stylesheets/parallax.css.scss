@@ -58,17 +58,17 @@
 
   body, html {
     overflow: hidden;
+    background: rgb(0,0,0);
   }
   .parallax {
     font-size: 120%;
-    color: white;
+    color: #778899;
   }
   .pollution {
   	font-size: 140%;
   	color: white;
   	font-weight: bold;
   }
-
 
   #group1 {
     z-index: 5; /* slide over group 2 */
@@ -81,7 +81,7 @@
     z-index: 3; /* slide under groups 1 and 3 */
   }
   #group2 .parallax__layer--back {
-    background-color: #ffffff;
+    background-color: #000000;
     background-image: asset-data-url('bluemarblewest.jpg');
     background-size: cover;
   }
@@ -98,7 +98,7 @@
   }
   #group4 .parallax__layer--deep {
    	background-color: #000000;
-    background-image: asset-data-url("Fairy-forest.jpg");
+    background-image: asset-data-url("light-bulb.jpg");
     background-size: cover;
   }
 
