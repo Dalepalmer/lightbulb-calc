@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 
     $("form#lightbulb-form").hide();
-    $("ul#lightbulb-output").append("<p>" + "Amount of Energy Saved:" + " " + newUsageCalc + " Kilowatts" + "Per Day" + "</p>");
+    $("ul#lightbulb-output").append("<p>" + "Amount of Energy Saved:" + " " + newUsageCalc + " Kilowatts" + " Per Day" + "</p>");
     $("ul#lightbuld-savings").appead("<p>" + "Which Addes up to" + yearlyDiff + " Killwatts a year" + "<p>");
   });
 });

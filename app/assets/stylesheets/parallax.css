@@ -106,7 +106,7 @@
     z-index: 3; /* slide over group 4 and 6 */
   }
   #group5 .parallax__layer--base {
-    background: rgb(214,229,100);
+    background: rgb(0,0,0);
   }
 
   #group6 {
