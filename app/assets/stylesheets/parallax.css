@@ -82,7 +82,7 @@
   }
   #group2 .parallax__layer--back {
     background-color: #ffffff;
-    background-image: url("bluemarblewest.jpg");
+    background-image: image-url("bluemarblewest.jpg");
     background-size: cover;
   }
 
@@ -98,7 +98,7 @@
   }
   #group4 .parallax__layer--deep {
    	background-color: #000000;
-    background-image: url("Fairy-forest.jpg");
+    background-image: image-url("Fairy-forest.jpg");
     background-size: cover;
   }
 
@@ -114,7 +114,7 @@
   }
   #group6 .parallax__layer--back {
 		background-color: #000000;
-    background-image: url("Coalpower.jpg");
+    background-image: image-url("Coalpower.jpg");
     background-size: cover;  }
 
   #group7 {
