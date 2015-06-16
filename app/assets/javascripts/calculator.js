@@ -42,10 +42,14 @@ $(document).ready(function() {
     newUsage.newBulb = newBulb;
     newUsage.count = count;
     newUsageCalc = newUsage.usageCalc();
+    yearlyDiff = newUsageCalc * 365;
+    dollarSavings = Math.floor(yearlyDiff * .12);
+    centSavings = (yearlyDiff * .12 % 1).toFixed(2) * 100;
 
 
     $("form#lightbulb-form").hide();
-    $("ul#lightbulb-output").append("<p>" + "Amount of Energy Saved:" + " " + newUsageCalc + " Kilowatts" + " Per Day" + "</p>");
-    $("ul#lightbuld-savings").appead("<p>" + "Which Addes up to" + yearlyDiff + " Killwatts a year" + "<p>");
+    $("ul#lightbulb-output").append("<p>" + "Amount of Energy Saved:" + " " + newUsageCalc + " Kilowatts-hours" + " Per Day" + "</p>");
+    $("ul#lightbulb-year").append("<p>" + "Which adds up to " + yearlyDiff + " Kilowatt-hours a year" + "<p>");
+    $("ul#lightbulb-savings").append("<p>" + "Which at the average rate of 12 cents per kilowatt-hour adds up to a savings of " + dollarSavings + " dollars and " + centSavings + " cents" + " a year" + "<p>");
   });
 });
