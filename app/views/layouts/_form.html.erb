@@ -4,34 +4,34 @@
           <h2>Calculate how much money and energy you could potentially save by switching to LED lighting today</h2>
           <div class="col-md-14">
             <form id="lightbulb-form">
-              <div class="form-group">
+              <div class="input-field">
                 <div class="col-md-6">
+                <input type="integer" id="bulb-count" required>
                 <label for="bulb-count">Number of Bulbs you are willing to change in your household</label>
-                <input type="integer" class="form-control" id="bulb-count" required>
               </div>
               </div><br>
-              <div class="form-group">
-                <div class="col-md-6">
+              <div class="input-field">
+                <div class="col-md-6 input-field">
+                <input type="integer" id="hours" required>
                 <label for="hours">Average number of hours used per day</label>
-                <input type="integer" class="form-control" id="hours" required>
               </div>
               </div><br>
-              <div class="form-group">
-                <label for="bulb-type-prior">Current Bulb Type?</label>
+              <div class="input-field">
                 <select id="current-type">
                   <option value="Incandescent">Incandescent</option>
                   <option value="CFL">Compact Fluorescent</option>
                 </select>
+                <label for="bulb-type-prior">Current Bulb Type?</label>
               </div>
-              <div class="form-group">
-                <label for="bulb-type-after">New Bulb Type?</label>
+              <div class="input-field">
                 <select id="new-type">
                   <option value="LED">LED</option>
                   <option value="CFL">Compact Fluorescent</option>
                 </select>
+                <label for="bulb-type-after">New Bulb Type?</label>
               </div><br>
-              <div class="form-group">
-                <button type="submit" class="btn btn-success">Calculate Your Savings</button>
+              <div class="input-field">
+                <button type="submit" class="btn">Calculate Your Savings</button>
               </div>
             </form>
           </div>
